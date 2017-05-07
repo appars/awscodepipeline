@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+#  - source: Config/config.txt
+#    destination: /webapps/Config
+  - source: target/gs-rest-service-0.1.0.jar
+    destination: /home/ec2-user/app
+hooks:
+#  BeforeInstall:
+#    - location: Scripts/UnzipResourceBundle.sh
+#  AfterInstall:
+#    - location: Scripts/RunResourceTests.sh
+#      timeout: 180
+  ApplicationStart:
+    - location: scripts/app_start.sh
+      timeout: 3600
+#  ValidateService:
+#    - location: Scripts/MonitorService.sh
+#      timeout: 3600

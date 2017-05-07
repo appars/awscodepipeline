@@ -3,7 +3,7 @@ os: linux
 files:
 #  - source: Config/config.txt
 #    destination: /webapps/Config
-  - source: target/gs-rest-service-0.1.0.jar
+  - source: build/libs/gs-rest-service-0.1.0.jar
     destination: /home/ec2-user/app
 hooks:
 #  BeforeInstall:

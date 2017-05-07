@@ -6,8 +6,8 @@ files:
   - source: build/libs/gs-rest-service-0.1.0.jar
     destination: /home/ec2-user/app
 hooks:
-#  BeforeInstall:
-#    - location: Scripts/UnzipResourceBundle.sh
+  BeforeInstall:
+    - location: scripts/before_install.sh
 #  AfterInstall:
 #    - location: Scripts/RunResourceTests.sh
 #      timeout: 180

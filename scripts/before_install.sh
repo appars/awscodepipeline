@@ -1,2 +1,3 @@
 #!/bin/bash
-pkill -9 java
+#kill java process before installing anything
+pkill -f 'java -jar'

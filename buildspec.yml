@@ -19,4 +19,5 @@ artifacts:
   files:
     - build/libs/gs-rest-service-0.1.0.jar
     - scripts/app_start.sh
+    - scripts/before_install.sh
     - appspec.yml

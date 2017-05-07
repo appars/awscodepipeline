@@ -6,14 +6,16 @@ files:
   - source: build/libs/gs-rest-service-0.1.0.jar
     destination: /home/ec2-user/app
 hooks:
-  BeforeInstall:
-    - location: scripts/before_install.sh
+  ApplicationStop:
+    - location: scripts/application_stop.sh
+      runas: root
 #  AfterInstall:
 #    - location: Scripts/RunResourceTests.sh
 #      timeout: 180
   ApplicationStart:
     - location: scripts/app_start.sh
-      timeout: 3600
+      runas: root
+      timeout: 60
 #  ValidateService:
 #    - location: Scripts/MonitorService.sh
 #      timeout: 3600
